@@ -20,9 +20,11 @@ public class NpuzzleHash {
      * @return true-已访问过且有更优路径, false-未访问过或需要更新
      */
     public boolean checkAndUpdate(String boardStr, int pathCost) {
-            if (pathCost < getCost(boardStr))
-                costMap.put(boardStr,pathCost);
-            return true;
+            if(this.getCost(boardStr) > pathCost) {
+                costMap.put(boardStr, pathCost);
+                return true;
+            }
+            return false;
     }
 
     /**
