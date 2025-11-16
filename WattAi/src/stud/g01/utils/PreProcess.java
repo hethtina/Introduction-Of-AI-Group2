@@ -62,7 +62,7 @@ public class PreProcess {
         }
         for (int i = 0; i < N; i++) {
             if (!used[i]) {
-                path.add(i);
+                path.add((Integer) i);
                 used[i] = true;
                 dfs(i + 1, depth + 1, path, result, used);
                 path.removeLast();
